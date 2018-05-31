@@ -1,0 +1,45 @@
+/* main styles */
+body {
+  background-color: #e0e0e0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.banner {
+  width: 40vw;
+  height: 30vw;
+  min-width: 300px;
+  min-height: 220px;
+  margin: 1rem;
+  position: relative;
+  display: block;
+  font-size: 2rem;
+  color: black;
+  background-image: url("/assets/images/linoleum.jpg");
+  background-size: cover;
+  overflow: hidden;
+}
+
+.banner__text {
+  position: absolute;
+  left: 1rem;
+  right: 1rem;
+  bottom: 1rem;
+}
+
+.banner--text-color {
+  color: white;
+}
+
+.banner--text-background .banner__text {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.banner--image-gradient {
+  background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url("/assets/images/linoleum.jpg");
+}
+
+.banner--text-shadow .banner__text {
+  text-shadow: 0 0 3px white;
+}
+
+/*# sourceMappingURL=main.css.map */

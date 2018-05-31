@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text on Image CSS Techniques</title>
+    <link rel="icon" type="image/png" href="assets/images/favicon.png"/>
+    <link rel="stylesheet" type="text/css" href="assets/styles/main.css"/>
+</head>
+<body>
+<h1>Text on Images</h1>
+
+<p>
+    The decision to put text on images can make a design more visually appealing,
+    but when the decision is part of a design system that must accommodate
+    a large variety of possible combinations of text and image,
+    you must take certain concerns into account
+    and incorporate them into the design system as a whole.
+</p>
+
+<h2>What we see</h2>
+
+<p>
+    Suppose you are mocking up examples for a design system,
+    and you are given 10 combinations of text and images
+    to display in an overlapping manner.
+    But in some cases, the text becomes illegible
+    where it overlaps parts of the associated image
+    that are not in high enough contrast with the text color.
+</p>
+
+<h2>What we often do</h2>
+
+<p>
+    As a designer you have many possible workarounds at your disposal,
+    and it is common to treat each combination differently
+    according to its respective circumstances. For instance, you can:
+</p>
+
+<ul>
+    <li>Change the color of the text</li>
+    <li>Insert line breaks and indentations at strategic positions in the text</li>
+    <li>Shift the entire text field's position within the image</li>
+    <li>Dim or brighten parts of an image where text contrast appears too low</li>
+</ul>
+
+<h2>Why it fails</h2>
+
+<p>
+    If your design system will become part of a CMS,
+    then it will need to render potentially thousands of combinations of text and images,
+    most of which you may never see while working on a few dozen hypothetical examples.
+    The people responsible for writing the text, taking the photos, compiling the digital feeds,
+    and managing the layouts will not necessarily have your advantage of visualizing the final result.
+    They will not necessarily be able to visit every combination of text and image
+    and apply some equivalent of the workarounds that you used when creating the mock examples.
+</p>
+
+<p>
+    <strong>
+    A design system for rendering managed content <em>must</em> work properly
+    for all possible combinations of content without the need to inspect and hand-customize each one.
+    </strong>
+</p>
+
+<h2>What we can do better (with examples)</h2>
+
+<p>
+    Here is a typical example of a contrast legibility problem.
+    The black text is not legible because much of it overlaps black or nearly black regions of the background image.
+</p>
+
+<div class="banner">
+    <div class="banner__text">Hello, world. Greetings, universe. Salutations, cosmos.</div>
+</div>
+
+<h2>An example of what not to do</h2>
+
+<p>
+    Simply switching the text color from black to white
+    improves legibility significantly,
+    but that only works because this image happens to be dark enough.
+    You can easily imagine a different image where white text would also fail legibility.
+    Even developers are quick to resort to hand-customizations, for instance,
+    introducing some data-driven mechanism that lets a content manager select a text color.
+    But that only moves the problem one step further away.
+    There will always be some possible image in the future with a combination of pixels
+    that will not provide enough contrast throughout the text field, no matter what color you use.
+    The same principle applies to changing text positions or inserting line breaks, etc.
+    That whole approach is wrong, because the problem is not the fault of the particular choice of text and image.
+</p>
+
+<p>
+    <strong>
+        Stop blaming the data. The fault lies with the system itself.
+    </strong>
+</p>
+
+<div class="banner banner--text-color">
+    <div class="banner__text">Hello, world. Greetings, universe. Salutations, cosmos.</div>
+</div>
+
+<h2>Solution #1: Text background strip</h2>
+
+<p>
+    An easy, low-fidelity solution is to set the <code>background-color</code> CSS property of the text element.
+    This example uses a semi-opaque text background color.
+</p>
+
+<div class="banner banner--text-background">
+    <div class="banner__text">Hello, world. Greetings, universe. Salutations, cosmos.</div>
+</div>
+
+<h2>Solution #2: Wash out the image</h2>
+
+<p>
+    If your implementation uses the <code>background-image</code> CSS property,
+    you can add a <code>linear-gradient</code> transform
+    to increase contrast for whatever text color you use.
+</p>
+
+<div class="banner banner--image-gradient">
+    <div class="banner__text">Hello, world. Greetings, universe. Salutations, cosmos.</div>
+</div>
+
+<h2>Solution #3: Text Shadow</h2>
+
+<p>
+    My personal favorite solution is the <code>text-shadow</code> CSS property,
+    where you can control the color, offset, and blur radius.
+    Simply by wrapping the text in a faint glow,
+    you can significantly improve legibility with minimal visual effect.
+</p>
+
+<div class="banner banner--text-shadow">
+    <div class="banner__text">
+        Hello, world. Greetings, universe. Salutations, cosmos.
+    </div>
+</div>
+
+
+<hr/>
+See also:
+<a href="https://css-tricks.com/design-considerations-text-images/">Design Considerations: Text on Images</a>
+
+
+<script type="text/javascript" src="assets/scripts/main.js"></script>
+</body>
+</html>
