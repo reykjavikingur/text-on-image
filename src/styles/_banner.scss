@@ -8,11 +8,12 @@
     min-height: 220px;
     margin: 1rem;
     position: relative;
-    display: inline-block;
+    display: block;
     font-size: 2rem;
     color: black;
     background-image: $background-image;
     background-size: cover;
+    overflow: hidden;
     
     &__text {
         position: absolute;
