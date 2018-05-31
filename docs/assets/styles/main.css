@@ -14,7 +14,7 @@ body {
   display: block;
   font-size: 2rem;
   color: black;
-  background-image: url("/assets/images/linoleum.jpg");
+  background-image: url("../images/linoleum.jpg");
   background-size: cover;
   overflow: hidden;
 }
@@ -35,7 +35,7 @@ body {
 }
 
 .banner--image-gradient {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url("/assets/images/linoleum.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url("../images/linoleum.jpg");
 }
 
 .banner--text-shadow .banner__text {
