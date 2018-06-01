@@ -30,7 +30,8 @@
 <h2>What we often do</h2>
 
 <p>
-    As a designer you have many possible workarounds at your disposal,
+    As a designer or front-end developer,
+    you have many possible workarounds at your disposal,
     and it is common to treat each combination differently
     according to its respective circumstances. For instance, you can:
 </p>
@@ -72,31 +73,23 @@
     <div class="banner__text">Hello, world. Greetings, universe. Salutations, cosmos.</div>
 </div>
 
-<h2>An example of what not to do</h2>
+<div class="banner white">
+    <div class="banner__text">Hello, world. Greetings, universe. Salutations, cosmos.</div>
+</div>
 
 <p>
-    Simply switching the text color from black to white
-    improves legibility significantly,
-    but that only works because this image happens to be dark enough.
-    You can easily imagine a different image where white text would also fail legibility.
-    Even developers are quick to resort to hand-customizations, for instance,
-    introducing some data-driven mechanism that lets a content manager select a text color.
-    But that only moves the problem one step further away.
-    There will always be some possible image in the future with a combination of pixels
-    that will not provide enough contrast throughout the text field, no matter what color you use.
-    The same principle applies to changing text positions or inserting line breaks, etc.
-    That whole approach is wrong, because the problem is not the fault of the particular choice of text and image.
+    This image is an extreme case but perfectly realistic.
+    Circumstantial fixes such as switching text color are not universally feasible.
+    Any hand-customizations that you must resort to within your design system
+    transfers the same burden to content managers, who have to deal with much more data
+    and don't necessarily have the design or development tools to facilitate these workarounds.
 </p>
 
 <p>
     <strong>
-        Stop blaming the data. The fault lies with the system itself.
+        Don't blame the data for faults that lie with the design system itself.
     </strong>
 </p>
-
-<div class="banner banner--text-color">
-    <div class="banner__text">Hello, world. Greetings, universe. Salutations, cosmos.</div>
-</div>
 
 <h2>Solution #1: Text background strip</h2>
 
@@ -106,6 +99,10 @@
 </p>
 
 <div class="banner banner--text-background">
+    <div class="banner__text">Hello, world. Greetings, universe. Salutations, cosmos.</div>
+</div>
+
+<div class="banner white banner--text-background">
     <div class="banner__text">Hello, world. Greetings, universe. Salutations, cosmos.</div>
 </div>
 
@@ -121,6 +118,10 @@
     <div class="banner__text">Hello, world. Greetings, universe. Salutations, cosmos.</div>
 </div>
 
+<div class="banner white banner--image-gradient">
+    <div class="banner__text">Hello, world. Greetings, universe. Salutations, cosmos.</div>
+</div>
+
 <h2>Solution #3: Text Shadow</h2>
 
 <p>
@@ -131,6 +132,12 @@
 </p>
 
 <div class="banner banner--text-shadow">
+    <div class="banner__text">
+        Hello, world. Greetings, universe. Salutations, cosmos.
+    </div>
+</div>
+
+<div class="banner white banner--text-shadow">
     <div class="banner__text">
         Hello, world. Greetings, universe. Salutations, cosmos.
     </div>

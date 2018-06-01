@@ -1,6 +1,6 @@
 .banner {
     
-    $background-image: url('../images/linoleum.jpg');
+    $background-image: url('../images/linoleum-hc.jpg');
     
     width: 40vw;
     height: 30vw;
@@ -8,7 +8,7 @@
     min-height: 220px;
     margin: 1rem;
     position: relative;
-    display: block;
+    display: inline-block;
     font-size: 2rem;
     color: black;
     background-image: $background-image;
@@ -22,12 +22,17 @@
         bottom: 1rem;
     }
     
-    &--text-color {
+    &.white {
         color: white;
     }
     
     &--text-background &__text {
         background-color: rgba(255, 255, 255, 0.4);
+    }
+    
+    &--text-background.white &__text {
+        color: white;
+        background-color: rgba(0, 0, 0, 0.4);
     }
     
     &--image-gradient {
@@ -37,8 +42,19 @@
         ), $background-image;
     }
     
+    &--image-gradient.white {
+        background-image: linear-gradient(
+                rgba(0, 0, 0, 0.4),
+                rgba(0, 0, 0, 0.4)
+        ), $background-image;
+    }
+    
     &--text-shadow &__text {
         text-shadow: 0 0 3px white;
+    }
+    
+    &--text-shadow.white &__text {
+        text-shadow: 0 0 3px black;
     }
     
 }
