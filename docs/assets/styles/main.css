@@ -4,6 +4,30 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+h6 {
+  font-size: 1.0rem;
+}
+
+h5 {
+  font-size: 1.2rem;
+}
+
+h4 {
+  font-size: 1.3rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
 .banner {
   width: 40vw;
   height: 30vw;
@@ -11,10 +35,10 @@ body {
   min-height: 220px;
   margin: 1rem;
   position: relative;
-  display: block;
+  display: inline-block;
   font-size: 2rem;
   color: black;
-  background-image: url("../images/linoleum.jpg");
+  background-image: url("../images/linoleum-hc.jpg");
   background-size: cover;
   overflow: hidden;
 }
@@ -26,7 +50,7 @@ body {
   bottom: 1rem;
 }
 
-.banner--text-color {
+.banner.white {
   color: white;
 }
 
@@ -34,12 +58,41 @@ body {
   background-color: rgba(255, 255, 255, 0.4);
 }
 
+.banner--text-background.white .banner__text {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
 .banner--image-gradient {
-  background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url("../images/linoleum.jpg");
+  background-image: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url("../images/linoleum-hc.jpg");
+}
+
+.banner--image-gradient.white {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("../images/linoleum-hc.jpg");
 }
 
 .banner--text-shadow .banner__text {
   text-shadow: 0 0 3px white;
+}
+
+.banner--text-shadow.white .banner__text {
+  text-shadow: 0 0 3px black;
+}
+
+.banner--text-haze .banner__text {
+  text-shadow: 0 0 20px white;
+}
+
+.banner--text-haze.white .banner__text {
+  text-shadow: 0 0 20px black;
+}
+
+.banner--text-outline .banner__text {
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.4), 1px 1px 0px rgba(255, 255, 255, 0.4), 1px 0px 0px rgba(255, 255, 255, 0.4), -1px 1px 0px rgba(255, 255, 255, 0.4), -1px 0px 0px rgba(255, 255, 255, 0.4), -1px -1px 0px rgba(255, 255, 255, 0.4), 0px -1px 0px rgba(255, 255, 255, 0.4), 1px -1px 0px rgba(255, 255, 255, 0.4);
+}
+
+.banner--text-outline.white .banner__text {
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.4), 1px 1px 0px rgba(0, 0, 0, 0.4), 1px 0px 0px rgba(0, 0, 0, 0.4), -1px 1px 0px rgba(0, 0, 0, 0.4), -1px 0px 0px rgba(0, 0, 0, 0.4), -1px -1px 0px rgba(0, 0, 0, 0.4), 0px -1px 0px rgba(0, 0, 0, 0.4), 1px -1px 0px rgba(0, 0, 0, 0.4);
 }
 
 /*# sourceMappingURL=main.css.map */
