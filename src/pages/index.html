@@ -91,42 +91,11 @@
     </strong>
 </p>
 
-<h2>Solution #1: Text background strip</h2>
+<h3>Text Shadow</h3>
 
 <p>
-    An easy, low-fidelity solution is to set the <code>background-color</code> CSS property of the text element.
-    This example uses a semi-opaque text background color.
-</p>
-
-<div class="banner banner--text-background">
-    <div class="banner__text">Hello, world. Greetings, universe. Salutations, cosmos.</div>
-</div>
-
-<div class="banner white banner--text-background">
-    <div class="banner__text">Hello, world. Greetings, universe. Salutations, cosmos.</div>
-</div>
-
-<h2>Solution #2: Wash out the image</h2>
-
-<p>
-    If your implementation uses the <code>background-image</code> CSS property,
-    you can add a <code>linear-gradient</code> transform
-    to increase contrast for whatever text color you use.
-</p>
-
-<div class="banner banner--image-gradient">
-    <div class="banner__text">Hello, world. Greetings, universe. Salutations, cosmos.</div>
-</div>
-
-<div class="banner white banner--image-gradient">
-    <div class="banner__text">Hello, world. Greetings, universe. Salutations, cosmos.</div>
-</div>
-
-<h2>Solution #3: Text Shadow</h2>
-
-<p>
-    My personal favorite solution is the <code>text-shadow</code> CSS property,
-    where you can control the color, offset, and blur radius.
+    The <code>text-shadow</code> CSS property
+    lets you control the color, offset, and blur radius.
     Simply by wrapping the text in a faint glow,
     you can significantly improve legibility with minimal visual effect.
 </p>
@@ -141,6 +110,71 @@
     <div class="banner__text">
         Hello, world. Greetings, universe. Salutations, cosmos.
     </div>
+</div>
+
+<h3>Text Outline</h3>
+
+<p>This is essentially a very crisp text shadow.</p>
+
+<div class="banner banner--text-outline">
+    <div class="banner__text">
+        Hello, world. Greetings, universe. Salutations, cosmos.
+    </div>
+</div>
+
+<div class="banner white banner--text-outline">
+    <div class="banner__text">
+        Hello, world. Greetings, universe. Salutations, cosmos.
+    </div>
+</div>
+
+<h3>Text Haze</h3>
+
+<p>This is the text shadow with a much larger blur radius.</p>
+
+<div class="banner banner--text-haze">
+    <div class="banner__text">
+        Hello, world. Greetings, universe. Salutations, cosmos.
+    </div>
+</div>
+
+<div class="banner white banner--text-haze">
+    <div class="banner__text">
+        Hello, world. Greetings, universe. Salutations, cosmos.
+    </div>
+</div>
+
+
+<h3>Text Background Strip</h3>
+
+<p>
+    An easy, low-fidelity solution is to set the <code>background-color</code> CSS property of the text element.
+    This example uses a semi-opaque text background color.
+</p>
+
+<div class="banner banner--text-background">
+    <div class="banner__text">Hello, world. Greetings, universe. Salutations, cosmos.</div>
+</div>
+
+<div class="banner white banner--text-background">
+    <div class="banner__text">Hello, world. Greetings, universe. Salutations, cosmos.</div>
+</div>
+
+
+<h3>Level the image</h3>
+
+<p>
+    If your implementation uses the <code>background-image</code> CSS property,
+    you can add a <code>linear-gradient</code> transform
+    to increase contrast for whatever text color you use.
+</p>
+
+<div class="banner banner--image-gradient">
+    <div class="banner__text">Hello, world. Greetings, universe. Salutations, cosmos.</div>
+</div>
+
+<div class="banner white banner--image-gradient">
+    <div class="banner__text">Hello, world. Greetings, universe. Salutations, cosmos.</div>
 </div>
 
 

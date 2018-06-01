@@ -29,7 +29,6 @@
     &--text-background &__text {
         background-color: rgba(255, 255, 255, 0.4);
     }
-    
     &--text-background.white &__text {
         color: white;
         background-color: rgba(0, 0, 0, 0.4);
@@ -41,7 +40,6 @@
                 rgba(255, 255, 255, 0.4)
         ), $background-image;
     }
-    
     &--image-gradient.white {
         background-image: linear-gradient(
                 rgba(0, 0, 0, 0.4),
@@ -52,9 +50,34 @@
     &--text-shadow &__text {
         text-shadow: 0 0 3px white;
     }
-    
     &--text-shadow.white &__text {
         text-shadow: 0 0 3px black;
+    }
+    
+    &--text-haze &__text {
+        text-shadow: 0 0 20px white;
+    }
+    &--text-haze.white &__text {
+        text-shadow: 0 0 20px black;
+    }
+    
+    @mixin text-outline($blur, $color) {
+        text-shadow: 0px 1px $blur $color,
+        1px 1px $blur $color,
+        1px 0px $blur $color,
+        -1px 1px $blur $color,
+        -1px 0px $blur $color,
+        -1px -1px $blur $color,
+        0px -1px $blur $color,
+        1px -1px $blur $color;
+    }
+    
+    &--text-outline &__text {
+        @include text-outline($blur: 0px, $color: rgba(255, 255, 255, 0.4));
+    }
+    
+    &--text-outline.white &__text {
+        @include text-outline($blur: 0px, $color: rgba(0, 0, 0, 0.4));
     }
     
 }
